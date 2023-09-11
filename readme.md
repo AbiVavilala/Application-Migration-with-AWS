@@ -37,7 +37,7 @@ Before beginning the migration process, make sure you have the following prerequ
 ### 1. Assessment and Planning
 
 - Current Environment consist of a three tier e-commerce application; a webserver running ubuntu with apache, PHP, Wordpress/ WooCommerce and a database server running Ubuntu with MySQL version 5.7.
-![]()
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/source-env.png)
 - Identify the components that need to be migrated.
 - Create a detailed migration plan, including timelines and resource requirements.
 
