@@ -38,8 +38,9 @@ Before beginning the migration process, make sure you have the following prerequ
 
 - Current Environment consist of a three tier e-commerce application; a webserver running ubuntu with apache, PHP, Wordpress/ WooCommerce and a database server running Ubuntu with MySQL version 5.7.
 ![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/source-env.png)
-- Identify the components that need to be migrated.
-- Create a detailed migration plan, including timelines and resource requirements.
+- The Onprem application has a webserver and database running on server. I will replatform database with AWS Database Migration Service.
+-  I will rehost the webserver with AWS Application Migration Service and modernize webserver to containers running on Amazon Elastic Container Service. 
+-  I will follow AWS Well Architected Framework to improve Operation Excellence, Security, Performance Efficency and Cost Optimization for My application in AWS.
 
 ### 2. Target Environment
 
