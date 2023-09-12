@@ -41,6 +41,11 @@ Before beginning the migration process, make sure you have the following prerequ
 - Identify the components that need to be migrated.
 - Create a detailed migration plan, including timelines and resource requirements.
 
+### 2. Target Environment
+
+The following target Amazon Virtual private cloud (VPC) is deployed during the environment preparation.
+
+
 ### 2. AWS Account Setup
 
 - Set up an AWS account if you don't already have one. 
