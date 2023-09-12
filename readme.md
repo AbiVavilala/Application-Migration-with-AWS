@@ -44,6 +44,9 @@ Before beginning the migration process, make sure you have the following prerequ
 ### 2. Target Environment
 
 The following target Amazon Virtual private cloud (VPC) is deployed during the environment preparation.
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/target-vpc.png)
+
+The VPC consists of 6 subnets (x2 public, x2 private for webservers and x2 private for database) across two availability zones.
 
 
 ### 2. AWS Account Setup
