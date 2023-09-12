@@ -5,14 +5,14 @@ This README.md file provides comprehensive documentation for the process of migr
 ## Table of Contents
 
 - [Introduction](#introduction)
-- [Prerequisites](#prerequisites)
-- [Migration Steps](#migration-steps)
+ - [Migration Steps](#migration-steps)
   - [1. Assessment and Planning](#1-assessment-and-planning)
-  - [2. AWS Account Setup](#2-aws-account-setup)
-  - [3. Networking](#3-networking)
-  - [4. Data Migration](#4-data-migration)
-  - [5. Application Deployment](#5-application-deployment)
-  - [6. Testing and Validation](#6-testing-and-validation)
+  - [2. Target Environment](#2-Target Environment)
+  - [3. AWS Account Setup](#3-AWS Account Setup)
+  - [4. Cloud Formation template](#4-Cloud Formation template)
+  - [5. Database Migration](#5-Database Migration)
+  - [6. Server Migration](#6-Server Migration)
+  - [7. Testing and Validation](#6-testing-and-validation)
 - [Monitoring and Optimization](#monitoring-and-optimization)
 - [Security Considerations](#security-considerations)
 - [Troubleshooting](#troubleshooting)
@@ -23,14 +23,6 @@ This README.md file provides comprehensive documentation for the process of migr
 
 This document outlines the steps and best practices for migrating your application to AWS. AWS provides a range of services and tools that can help you seamlessly migrate your application to the cloud. By following this guide, you will ensure a smooth transition while taking advantage of AWS's scalability, reliability, and cost-effectiveness.
 
-## Prerequisites
-
-Before beginning the migration process, make sure you have the following prerequisites in place:
-
-- A clear understanding of your application's architecture and dependencies.
-- An AWS account with the necessary permissions for resource creation.
-- Familiarity with AWS services relevant to your migration (e.g., EC2, RDS, VPC, S3, etc.).
-- Backup of your application data and configurations.
 
 ## Migration Steps
 
@@ -50,13 +42,14 @@ The following target Amazon Virtual private cloud (VPC) is deployed during the e
 The VPC consists of 6 subnets (x2 public, x2 private for webservers and x2 private for database) across two availability zones.
 
 
-### 2. AWS Account Setup
+### 3. AWS Account Setup
 
-- Set up an AWS account if you don't already have one. 
 - Configure AWS Identity and Access Management (IAM) roles and permissions.
-- Set up billing and cost monitoring to track expenses.
+  
+  AwS IAM user has been created with Administrator access permission added. Logged  into AWS using IAM User
 
-### 3. Networking
+
+ ### 4. Cloud Formation 
 
 - Design your Virtual Private Cloud (VPC) architecture.
 - Configure network settings, subnets, and security groups.
