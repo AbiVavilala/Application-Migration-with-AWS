@@ -1,6 +1,6 @@
 # Application Migration with AWS
 
-This README.md file provides comprehensive documentation for the process of migrating an application to the Amazon Web Services (AWS) cloud platform. Please follow the steps outlined below to ensure a successful migration.
+This README.md file provides comprehensive documentation for the process of migrating an application to the Amazon Web Services (AWS) cloud platform. I followed the steps outlined below for Migrating Onprem Wordpress Application to AWS.
 
 ## Table of Contents
 
@@ -43,7 +43,7 @@ Before beginning the migration process, make sure you have the following prerequ
 
 ### 2. AWS Account Setup
 
-- Set up an AWS account if you don't already have one.
+- Set up an AWS account if you don't already have one. 
 - Configure AWS Identity and Access Management (IAM) roles and permissions.
 - Set up billing and cost monitoring to track expenses.
 
