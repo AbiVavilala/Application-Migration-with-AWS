@@ -6,13 +6,13 @@ This README.md file provides comprehensive documentation for the process of migr
 
 - [Introduction](#introduction)
  - [Migration Steps](#migration-steps)
-  - [1. Assessment and Planning](#1-assessment-and-planning)
-  - [2. Target Environment](#2-Target-Environment)
-  - [3. AWS Account Setup](#3-AWS-Account-Setup)
-  - [4. Cloud Formation template](#4-CloudFormation-template)
-  - [5. Database Migration](#5-Database-Migration)
-  - [6. Server Migration](#6-Server-Migration)
-  - [7. Testing and Validation](#6-testing-and-validation)
+   - [1. Assessment and Planning](#1-assessment-and-planning)
+   - [2. Target Environment](#2-Target-Environment)
+   - [3. AWS Account Setup](#3-AWS-Account-Setup)
+   - [4. Cloud Formation template](#4-CloudFormation-template)
+   - [5. Database Migration](#5-Database-Migration)
+   - [6. Server Migration](#6-Server-Migration)
+   - [7. Testing and Validation](#6-testing-and-validation)
 - [Monitoring and Optimization](#monitoring-and-optimization)
 - [Security Considerations](#security-considerations)
 - [Troubleshooting](#troubleshooting)
@@ -51,9 +51,8 @@ The VPC consists of 6 subnets (x2 public, x2 private for webservers and x2 priva
 
  ### 4. Cloud Formation 
 
-- Design your Virtual Private Cloud (VPC) architecture.
-- Configure network settings, subnets, and security groups.
-- Establish VPN or Direct Connect if needed for on-premises connectivity.
+I downloaded AWS cloud formation template which will create a source environment and target environment. 
+ 
 
 ### 4. Data Migration
 
