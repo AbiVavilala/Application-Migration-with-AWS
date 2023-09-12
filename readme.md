@@ -7,12 +7,11 @@ This README.md file provides comprehensive documentation for the process of migr
 - [Introduction](#introduction)
  - [Migration Steps](#migration-steps)
    - [1. Assessment and Planning](#1-assessment-and-planning)
-   - [2. Target Environment](#2-Target-Environment)
-   - [3. AWS Account Setup](#3-AWS-Account-Setup)
-   - [4. Cloud Formation template](#4-CloudFormation-template)
-   - [5. Database Migration](#5-Database-Migration)
-   - [6. Server Migration](#6-Server-Migration)
-   - [7. Testing and Validation](#6-testing-and-validation)
+   - [2. AWS Account Setup](#2-AWS-Account-Setup)
+   - [3. Cloud Formation template](#3-CloudFormation-template)
+   - [4. Database Migration](#4-Database-Migration)
+   - [5. Server Migration](#5-Server-Migration)
+   - [6. Testing and Validation](#6-testing-and-validation)
 - [Monitoring and Optimization](#monitoring-and-optimization)
 - [Security Considerations](#security-considerations)
 - [Troubleshooting](#troubleshooting)
@@ -28,7 +27,7 @@ This document outlines the steps and best practices for migrating your applicati
 
 ### 1. Assessment and Plannin
 
-### Soruce Environment
+### Source Environment
 - Current Environment consist of a three tier e-commerce application; a webserver running ubuntu with apache, PHP, Wordpress/ WooCommerce and a database server running Ubuntu with MySQL version 5.7.
 ![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/source-env.png)
 - The Onprem application has a webserver and database running on server. I will replatform database with AWS Database Migration Service.
