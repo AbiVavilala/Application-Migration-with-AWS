@@ -25,7 +25,7 @@ This document outlines the steps and best practices for migrating your applicati
 
 ## Migration Steps
 
-### 1. Assessment and Plannin
+### 1. Assessment and Planning
 
 ### Source Environment
 - Current Environment consist of a three tier e-commerce application; a webserver running ubuntu with apache, PHP, Wordpress/ WooCommerce and a database server running Ubuntu with MySQL version 5.7.
@@ -34,6 +34,20 @@ This document outlines the steps and best practices for migrating your applicati
 -  I will rehost the webserver with AWS Application Migration Service and modernize webserver to containers running on Amazon Elastic Container Service. 
 -  I will follow AWS Well Architected Framework to improve Operation Excellence, Security, Performance Efficency and Cost Optimization for My application in AWS.
    
+
+
+
+### 2. AWS Account Setup
+
+- Configure AWS Identity and Access Management (IAM) roles and permissions.
+  
+  AwS IAM user has been created with Administrator access permission added. Logged  into AWS using IAM User
+
+
+ ### 3. Cloud Formation 
+
+I downloaded AWS cloud formation template which will create a source environment and target environment as required for this project. Please find the resource created below.
+ 
 ###  Target Environment
 
 - The following target Amazon Virtual private cloud (VPC) is deployed during the environment preparation.
@@ -41,22 +55,10 @@ This document outlines the steps and best practices for migrating your applicati
 
 The VPC consists of 6 subnets (x2 public, x2 private for webservers and x2 private for database) across two availability zones.
 
+### 4. Database Migration
 
-### 3. AWS Account Setup
+### Set Up networking
 
-- Configure AWS Identity and Access Management (IAM) roles and permissions.
-  
-  AwS IAM user has been created with Administrator access permission added. Logged  into AWS using IAM User
-
-
- ### 4. Cloud Formation 
-
-I downloaded AWS cloud formation template which will create a source environment and target environment. 
- 
-
-### 4. Data Migration
-
-- Choose an appropriate data migration strategy (e.g., AWS Database Migration Service, AWS Snowball, etc.).
 - Migrate your application data and databases to AWS.
 - Verify data integrity and consistency.
 
@@ -96,6 +98,4 @@ I downloaded AWS cloud formation template which will create a source environment
 - [AWS Well-Architected Framework](https://aws.amazon.com/architecture/well-architected/)
 - [AWS Documentation](https://docs.aws.amazon.com/)
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
+ 
