@@ -43,6 +43,7 @@ in this migration, My strategy is to rehost Wordpress application on EC2 instanc
 - Configure AWS Identity and Access Management (IAM) roles and permissions.
   
 - AWS IAM user has been created with Administrator access permission added. Logged  into AWS using IAM User.
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/aws-sinign.PNG)
 
 
  ### 3. Cloud Formation 
@@ -62,7 +63,7 @@ The VPC consists of 6 subnets (x2 public, x2 private for webservers and x2 priva
 ### Set Up Networking
 
 In this workshoop, will migrate Source database to Target database using DMS replication instance. DMS replication instance will need to connect to source database over public internet, while to the target database over private network.
-
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/Set-Up-Networking.png)
  
 ### 5. Application Deployment
 
