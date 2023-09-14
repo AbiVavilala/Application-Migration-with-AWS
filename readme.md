@@ -46,7 +46,7 @@ in this migration, My strategy is to rehost Wordpress application on EC2 instanc
 ![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/aws-sinign.PNG)
 
 
- ### 3. Cloud Formation 
+ ### 3. Cloud Formation to create source and target environment
 
 I Uploaded AWS cloud formation template which will create a source environment and target environment as required for this project. 
 
@@ -71,7 +71,10 @@ The VPC consists of 6 subnets (x2 public, x2 private for webservers and x2 priva
 
 
 ### 4. Database Migration
-In th
+
+I will migrate Source Datbase hosted on EC2 instance.
+
+
 ### Set Up Networking
 
 In this workshoop, will migrate Source database to Target database using DMS replication instance. DMS replication instance will need to connect to source database over public internet, while to the target database over private network.
