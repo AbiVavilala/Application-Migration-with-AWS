@@ -48,7 +48,19 @@ in this migration, My strategy is to rehost Wordpress application on EC2 instanc
 
  ### 3. Cloud Formation 
 
-I downloaded AWS cloud formation template which will create a source environment and target environment as required for this project. Please find the resource created below.
+I Uploaded AWS cloud formation template which will create a source environment and target environment as required for this project. 
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/cloudformation1.PNG)
+
+click on next
+
+I entered the details of the stack
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/cloudformation2.PNG)
+
+once stack is submitted the required resource will be created. you can check the output of stack to see the output. both source and target environment is craeted.
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/cloudformation3.PNG)
  
 ###  Target Environment
 
