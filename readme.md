@@ -126,7 +126,7 @@ In additional configuration select Enable encryption and untick Enable automated
 ![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/targetdb8.PNG)
  
 Click on Craete a database.
-![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/10.PNG)
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/10.png)
 
 
 
