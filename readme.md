@@ -135,31 +135,31 @@ One of the pre-requisites for using of AWS DMS is having configured a subnet gro
 
 Go to AWS Console > Services > Migration & Transfer > Database Migration Service > Subnet groups and click on Create subnet group button.
 
-![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/replication-instance.png)
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/replication-instance.PNG)
 
 give a name for subnet group and select Target VPC and add Two public subnets for Replication instance to launch so that they can communicate with source server on public network. 
 
-![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/replication-instance1.png)
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/replication-instance1.PNG)
 
 In this Step, we will create DMS replication instance. 
 
 Inside AWS Console, go to Services and Database Migration Service. Click on Replication instances and then on the Create replication instance button.
 
-![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/replication-instance2.png)
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/replication-instance2.PNG)
 
 
 On the Create replication instance screen I configured a new replication instance with values 
 
-![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/replication-instance3.png)
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/replication-instance3.PNG)
 
 I selected the values as needed for my migration.
 
-![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/replication-instance4.png)
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/replication-instance4.PNG)
 
 
 Click on Create instance
 
-![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/replication-instance5.png)
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/replication-instance5.PNG)
 
 
 
