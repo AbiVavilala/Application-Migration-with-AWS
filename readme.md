@@ -161,6 +161,17 @@ Click on Create instance
 
 ![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/replication-instance5.PNG)
 
+I made changes to Source database security group and allowed all traffic from internet for Repliation Instance to reach Source database.
+
+### Configure Source Database
+
+For AWS DMS continuous replication from MySQL database, you'll need to enable the binary log and make configuration changes on the source database. Please see the configuration changes made on source database
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/Inkedconfigure-source-database.jpg)
+
+I tested the changes to make sure update in /etc/mysql/my.cnf took effect, by running the following commans
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/configure-source-database1.PNG)
 
 
 ### 5. Application Deployment
