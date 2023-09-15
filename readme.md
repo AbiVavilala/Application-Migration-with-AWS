@@ -29,7 +29,7 @@ This document outlines the steps and best practices for migrating your applicati
 
 ### Source Environment
 - Current Environment consist of a three tier e-commerce application; a webserver running ubuntu with apache, PHP, Wordpress/ WooCommerce and a database server running Ubuntu with MySQL version 5.7.
-![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/source-env.png)
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/source-env.png)
 - The Onprem application has a webserver and database running on server. I will replatform database with AWS Database Migration Service.
 
    
@@ -43,29 +43,29 @@ in this migration, My strategy is to rehost Wordpress application on EC2 instanc
 - Configure AWS Identity and Access Management (IAM) roles and permissions for IAM user needed for this migration.
   
 - AWS IAM user has been created with Administrator access permission added. Logged  into AWS using IAM User.
-![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/aws-sinign.PNG)
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/aws-sinign.PNG)
 
 
  ### 3. Cloud Formation to create source and target environment
 
 I Uploaded AWS cloud formation template which will create a source environment and target environment as required for this project. 
 
-![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/cloudformation1.PNG)
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/cloudformation1.PNG)
 
 click on next
 
 I entered the details of the stack
 
-![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/cloudformation2.PNG)
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/cloudformation2.PNG)
 
 once stack is submitted the required resource will be created. you can check the output of stack to see the output. both source and target environment is craeted.
 
-![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/cloudformation3.PNG)
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/cloudformation3.PNG)
  
 ###  Target Environment
 
 - The following target Amazon Virtual private cloud (VPC) is deployed during the environment preparation.
-![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/target-vpc.png)
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/target-vpc.png)
 
 The VPC consists of 6 subnets (x2 public, x2 private for webservers and x2 private for database) across two availability zones. nat gateway is deployed in two public subnets in AZs and internet gateway is deployed using this cloud formation template.
 
@@ -73,13 +73,13 @@ The VPC consists of 6 subnets (x2 public, x2 private for webservers and x2 priva
 ### 4. Database Migration
 
 I will migrate Source Datbase hosted on EC2 instance to AWS managed MySQL RDS
-![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/sourcedb.PNG)
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/sourcedb.PNG)
 
 ### Set Up Networking
 
 In this workshoop, will migrate Source database to Target database using DMS replication instance. DMS replication instance will need to connect to source database over public internet, while to the target database over private network.
 
-![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/Set-Up-Networking.png)
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/Set-Up-Networking.png)
  
 ### 5. Application Deployment
 
