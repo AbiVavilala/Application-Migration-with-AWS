@@ -189,11 +189,52 @@ Create Source Endpoint and run connection test
 
 ![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/source%20endpoint%20connection%20test.PNG)
 
-### 5. Application Deployment
+### Create and run replication
 
-- Set up EC2 instances or choose a serverless approach (e.g., AWS Lambda).
-- Install and configure your application and its dependencies.
-- Ensure proper scaling and load balancing for high availability.
+In AWS DMS console, go to Database migration tasks and click the Create Task button.
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/databasereplicationtask.PNG)
+
+In Create database migration task screen fill with the required information
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/databasereplicationtask1.PNG)
+
+In Task Setting Wizard enter the following values
+
+Parameter	Value
+- Target table preparation mode: Do nothing
+- Validation:Turn on
+- Task Logs:Turn on
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/databasereplicationtask2.PNG)
+
+In the Table mappings panel select Wizard mode, press the Add new selection rule button and select wordpress-db in the Schema drop-down.
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/databasereplicationtask4.PNG)
+
+In the Migration task startup configuration, select Automatically on create then Scroll to the bottom of the screen and click the Create task button to create the task and start the data replication.
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/databasereplicationtask5.PNG)
+
+Monitor the task until the status is changed to Load complete, replication ongoing and the progress is 100%
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/replicationtask.PNG)
+
+
+## 5. Server Migration
+
+ After succesfully migrating database to AWS. I am migrating Onprem webserver to AWS. This is straight lift and shift migration. in this I am only rehosting the application
+
+### Re-host with Application Migration Service
+
+- Go to AWS Application Migration Service console .
+
+- Click on Get started button, and then Set up service. This will create the necessary IAM resources and also the default templates.
+
+- At the MGN console, go to Replication template menu at Settings section and edit the default template to change the staging area's subnet.
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/AWSMGN.PNG)
+
 
 ### 6. Testing and Validation
 
