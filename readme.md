@@ -46,7 +46,7 @@ in this migration, My strategy is to rehost Wordpress application on EC2 instanc
 ![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/aws-sinign.PNG)
 
 
- ### 3. Cloud Formation to create source and target environment
+ ## 3. Cloud Formation to create source and target environment
 
 I Uploaded AWS cloud formation template which will create a source environment and target environment as required for this project. 
 
@@ -70,17 +70,67 @@ once stack is submitted the required resource will be created. you can check the
 The VPC consists of 6 subnets (x2 public, x2 private for webservers and x2 private for database) across two availability zones. nat gateway is deployed in two public subnets in AZs and internet gateway is deployed using this cloud formation template.
 
 
-### 4. Database Migration
+## 4. Database Migration
 
 I will migrate Source Datbase hosted on EC2 instance to AWS managed MySQL RDS
 ![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/sourcedb.PNG)
 
 ### Set Up Networking
 
-In this workshoop, will migrate Source database to Target database using DMS replication instance. DMS replication instance will need to connect to source database over public internet, while to the target database over private network.
+I will migrate Source database to Target database using DMS replication instance. DMS replication instance will need to connect to source database over public internet, while to the target database over private network. I will setup required networking before creating replication instance and Target database
 
 ![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/Set-Up-Networking.png)
+
+I created a security group for  allowing outbound traffic from DMS Replication instace
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/RI-SG1.PNG)
+
+
+I created a security group to allow inbound traffic from DMS Replication instance Security Group (RI-SG). Create a rule to allow inbound traffic from DMS Replication instance Security group.
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/DB-SG.PNG)
+
  
+
+I will create a subnet group where target RDS will be deployed. I will install RDS in private subnet in Target VPC
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/subnetgroup1.PNG)
+
+
+I selected databases from the menu and on the left click create database. select Mysql as engine options and Engine version MySQL 5.7.41
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/targetdb1.PNG)
+
+For this project I selected Free tier as I want to keep cost low.
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/targetdb2.PNG)
+
+In settings section I configured DB Instance identifier, then Master username and password for new database
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/targetdb3.PNG)
+
+In storage section, I selected db.t3.micro from the Burstable DB instance vclass and allocated 20 GB of storage for this database.
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/targetdb4.PNG)
+
+In connectivity section, I selected target VPC, in VPC security group select DB-SG. make sure subnet group we craeted is auto populated.
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/targetdb5.PNG)
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/targetdb6.PNG)
+
+In Database authentication select password authentication
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/targetdb7.PNG)
+
+In additional configuration select Enable encryption and untick Enable automated backups to reduce cost.
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/targetdb8.PNG)
+ 
+Click on Craete a database.
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/10.PNG)
+
+
+
+
 ### 5. Application Deployment
 
 - Set up EC2 instances or choose a serverless approach (e.g., AWS Lambda).
