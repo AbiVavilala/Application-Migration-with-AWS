@@ -72,7 +72,7 @@ The VPC consists of 6 subnets (x2 public, x2 private for webservers and x2 priva
 
 ### 4. Database Migration
 
-I will migrate Source Datbase hosted on EC2 instance.
+I will migrate Source Datbase hosted on EC2 instance to AWS managed MySQL RDS
 ![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/sourcedb.PNG)
 
 ### Set Up Networking
