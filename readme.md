@@ -187,7 +187,7 @@ Will test target Endpoint connect my selecting Target VPC and replication instan
 
 Create Source Endpoint and run connection test
 
-![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/target-endpoint.PNG)
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/source%20endpoint%20connection%20test.PNG)
 
 ### 5. Application Deployment
 
