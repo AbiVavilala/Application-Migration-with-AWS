@@ -173,6 +173,21 @@ I tested the changes to make sure update in /etc/mysql/my.cnf took effect, by ru
 
 ![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/configure-source-database1.PNG)
 
+### Create Source and target endpoint
+
+In AWS console search for WS Database Migration Service, click on Endpoints and Create endpoint button.
+
+Create Target Endpoint
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/target-endpoint.PNG)
+
+Will test target Endpoint connect my selecting Target VPC and replication instance we just created. please see image below.
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/target-endpoint1.PNG)
+
+Create Source Endpoint and run connection test
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/target-endpoint.PNG)
 
 ### 5. Application Deployment
 
