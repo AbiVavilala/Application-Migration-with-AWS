@@ -235,6 +235,52 @@ Monitor the task until the status is changed to Load complete, replication ongoi
 
 ![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/AWSMGN.PNG)
 
+Click on Set up service
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/AWSMGN1.PNG)
+
+Template gets created and click on edit template
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/AWSMGN3.PNG)
+
+select public subnet and save template
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/AWSMGN4.PNG)
+
+
+### Install Agent
+
+AWS Application Migration Service replicates data to AWS using agent that must be installed on the source server.
+
+For the Application Migration Service agent to replicate data, you need to have an AWS IAM User with proper privileges created in your target AWS account. I created them in the cloud formation stack. 
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/accesskey.PNG)
+
+Connect to the source server using ssh key.
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/installagent1.PNG)
+
+I ran the following commands
+
+cd ~
+wget -O ./aws-replication-installer-init.py https://aws-application-migration-service-us-west-2.s3.amazonaws.com/latest/linux/aws-replication-installer-init.py
+sudo python3 aws-replication-installer-init.py
+
+
+Provide AWS region and AWS credentials
+
+When prompted provide AWS Region (us-west-2), then AWS Access Key ID and AWS Secret Access Key from cloudformation template.
+Provide AWS region and AWS credentials
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/installagent.PNG)
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/installagent3.PNG)
+
+
+Replication starts 
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/sourceserver.PNG)
+
 
 ### 6. Testing and Validation
 
