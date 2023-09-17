@@ -282,6 +282,12 @@ Replication starts
 ![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/sourceserver.PNG)
 
 
+Click on Source Server name and it will take yo to following page
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/ready server.PNG)
+
+
+
 ### 6. Testing and Validation
 
 - Conduct thorough testing of your migrated application.
