@@ -274,7 +274,7 @@ Provide AWS region and AWS credentials
 
 ![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/installagent.png)
 
-![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/installagent3.PNG)
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/installagent3.png)
 
 
 Replication starts 
