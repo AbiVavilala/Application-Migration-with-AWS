@@ -272,7 +272,7 @@ Provide AWS region and AWS credentials
 When prompted provide AWS Region (us-west-2), then AWS Access Key ID and AWS Secret Access Key from cloudformation template.
 Provide AWS region and AWS credentials
 
-![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/installagent.PNG)
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/installagent.png)
 
 ![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/installagent3.PNG)
 
