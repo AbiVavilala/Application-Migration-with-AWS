@@ -396,7 +396,7 @@ When the Cutover is finished and Application Migration Service has created a run
 
 Will update Webserver security group to accept traffic from anywhere to Port 80, 443 and 22.
 
-![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/application%config.PNG)
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/application%20config.PNG)
 
  Click Edit inbound rules. Make sure traffic from anywhere to port 80 (HTTP) is allowed. Add rule to allow SSH from anywhere to port 22 (SSH). Finally click Save rules.
 
