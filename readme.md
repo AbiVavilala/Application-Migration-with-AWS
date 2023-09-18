@@ -366,34 +366,78 @@ Continue on the popup to confirm that the testing went succesful and testing ins
 ![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/ready_for_cutover_pop-up.png)
 
 
-### 6. Testing and Validation
+### launch cutover instance
 
-- Conduct thorough testing of your migrated application.
-- Perform load testing to ensure scalability.
-- Monitor application performance and optimize as needed.
+Select hostname of the Source server and click on Launch cutover instances.
 
-## Monitoring and Optimization
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/launch_cutover_instance.png)
 
-- Implement AWS CloudWatch for monitoring and alerting.
-- Continuously optimize your AWS resources for cost efficiency.
-- Implement auto-scaling and redundancy for improved reliability.
 
-## Security Considerations
+you will get following popup. please click on launch
 
-- Follow AWS best practices for security (e.g., IAM, Security Groups, Network ACLs).
-- Use AWS Identity and Access Management (IAM) to manage access and permissions.
-- Enable encryption for data in transit and at rest.
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/launchcutoverinstance.PNG)
 
-## Troubleshooting
+This will trigger the cutover job (it will take ~10-15 minutes), you can find its details after clicking on Cutover Job ID in the Lifecycle section.
 
-- Monitor AWS CloudWatch logs for error tracking.
-- Utilize AWS support resources and forums for assistance.
-- Maintain backup and recovery strategies.
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/launchcutoverinstance1.PNG)
+
+ 
+Wait for the Launch status to change from Waiting to Launched / First boot: Started. At this stage Webserver will be visible and Running in the EC2 Console.
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/launchec2.PNG)
+
+On source server click on finalize cutover. this will stop replication and terminate source server assoiciated with migration.
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/finalizecutover.PNG)
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/finalize_cutover_pop-up.png)
+
+
+
+### Configure application.
+
+When the Cutover is finished and Application Migration Service has created a running instance of the Webserver in my AWS account, it's time to update the web application configuration to use replicated AWS RDS database (created in the Database Migration step).
+
+Will update Webserver security group to accept traffic from anywhere to Port 80, 443 and 22.
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/application%config.PNG)
+
+ Click Edit inbound rules. Make sure traffic from anywhere to port 80 (HTTP) is allowed. Add rule to allow SSH from anywhere to port 22 (SSH). Finally click Save rules.
+
+ Go to Networking tab and make a note of Public DNS (IPv4) address and Private IP
+
+ Connect via SSH to the Webserver created by the Application Migration Service
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/applicationconfiguration2.png)
+
+Modified wordpress configuration and add the following two lines, replacing TARGET_WEBSERVER_PUBLIC_DNS with your Target Webserver EC2 Public DNS (IPv4), to make sure links in your wordpress site point to the new webserver.
+
+    define('WP_SITEURL', 'http://ec2-54-244-168-116.us-west-2.compute.amazonaws.com');
+    define('WP_HOME',    'http://ec2-54-244-168-116.us-west-2.compute.amazonaws.com');
+
+Update the RDS instance VPC security group to allow inbound traffic from Webserver
+
+a. Go to AWS Console > Services > EC2 > Security Groups and select your RDS VPC security group (DB-SG)
+b. Go to the Inbound tab and click the Edit button
+c. Add inbound rule that allows traffic from the Webserver (using its Private IP or the security group it belongs to) on port 3306 (MySQL port)
+
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/applicationconfig1.png)
+
+Validate the migration
+
+Open the Webserver Public DNS (IPv4) name in your web browser, will see a unicorn store.
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/applicationconfig5.png)
+
+
+This is how I performed life and shift migration of my wordpress unicorn store application.
+ 
 
 ## Resources
 
 - [AWS Migration Hub](https://aws.amazon.com/migration/)
 - [AWS Well-Architected Framework](https://aws.amazon.com/architecture/well-architected/)
 - [AWS Documentation](https://docs.aws.amazon.com/)
-
+- [Application Migration with AWS](https://catalog.us-east-1.prod.workshops.aws/workshops/c6bdf8dc-d2b2-4dbd-b673-90836e954745/en-US)
  
