@@ -351,9 +351,19 @@ I will launch a test instance by clicking on launch test instance by clikcing on
 
 Wait for the Completed Status (it should take ~10-15 minutes).
 
-![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/testlaunch.PNG)
+![]( https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/testing_job_details.png)
 
 Once testing is completed look for the events
+
+you will see succesfully launched test/cutover ec2 instance. This process validates conversion of boot volume and target server network configuration.
+
+In souce server,  click on your server Hostname, then Test and Cutover -> Mark as "ready for cutover".
+
+![]( https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/ready_for_cutover.png)
+
+Continue on the popup to confirm that the testing went succesful and testing instance can be terminated.
+
+![]( https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/ready_for_cutover_pop_up.png)
 
 
 ### 6. Testing and Validation
