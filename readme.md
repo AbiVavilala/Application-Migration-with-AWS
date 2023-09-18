@@ -284,7 +284,7 @@ Replication starts
 
 Click on Source Server name and it will take yo to following page
 
-![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/ready%20server.PNG)
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/sourceserver1.PNG)
 
 
 
