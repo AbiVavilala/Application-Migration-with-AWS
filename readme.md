@@ -345,11 +345,15 @@ Now my source server is ready for test.
 
 ![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/sourceserver1.PNG)
 
-I will launch a test instance by clikcing on launch test instance by clikcing on test and cutover button
+I will launch a test instance by clicking on launch test instance by clikcing on test and cutover button
 
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/Inkedfinalizecutover.jpg)
 
+Wait for the Completed Status (it should take ~10-15 minutes).
 
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/testlaunch.PNG)
 
+Once testing is completed look for the events
 
 
 ### 6. Testing and Validation
