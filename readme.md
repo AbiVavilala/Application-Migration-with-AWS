@@ -418,7 +418,7 @@ b. Go to the Inbound tab and click the Edit button
 c. Add inbound rule that allows traffic from the Webserver (using its Private IP or the security group it belongs to) on port 3306 (MySQL port)
 
 
-![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/applicationconfig1.png)
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/applicationconfig1.PNG)
 
 Validate the migration
 
