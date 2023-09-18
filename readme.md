@@ -282,7 +282,7 @@ Replication starts
 ![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/sourceserver.PNG)
 
 
-Click on Source Server name and it will take yo to following page
+Click on Source Server name and it will take yo to following page. on this page I monitor replication progress.
 
 ![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/sourceserver1.PNG)
 
@@ -290,6 +290,66 @@ Click on Source Server name and it will take yo to following page
 In Server Info we can find retrived information about source server. We can view disk settings, launch settings.
 
 ![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/sourceserver2.PNG)
+
+In Lifecycle, clikc on launch settings and click on Edit.
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/sourceserver3.PNG)
+
+On launch settings page change instance type right sizing to off and then click on Save.
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/sourceserver4.PNG)
+
+Modify EC2 launch Template. click on Modify EC2 launch template section and confirm by clicking on Modify.
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/sourceserver5.PNG)
+
+Scroll to the instance type and change to T3.micro.
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/sourceserver6.PNG)
+
+Scroll down to network settings and select TargetVPC-public-a as the Subnet - this is where we want our webserver to run after the migration.
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/sourceserver7.PNG)
+
+In network settings, create security group. create new SG and allow all HTTP and HTTPS traffic.
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/sourceserver7.PNG)
+
+Then expand the Advanced network configuration section, and for the first Network interface, set Auto-assign public IP to Enable to make sure webserver will be accessible over public IP.
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/sourceserver8.PNG)
+
+In the Resource tags section change the Name tag value to Webserver, like on the screenshot below.
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/sourceserver9.PNG)
+
+Finally in the Advanced details section, select the following role as IAM Instance profile: AWSApplicationMigrationLaunchInstanceWithSsmRole.
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/sourceserver10.PNG)
+
+Scroll down and click on create template version.
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/sourceserver11.PNG)
+
+update default EC2 version in Launch template. In the lversion tab slect the latest version and set it as default version. This template will be used to launch our new Migrated Web Server.
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/sourceserver12.PNG)
+
+You will see following message
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/sourceserver14.PNG)
+
+
+### Launch test instance
+
+Now my source server is ready for test. 
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/sourceserver1.PNG)
+
+I will launch a test instance by clikcing on launch test instance by clikcing on test and cutover button
+
+
+
+
 
 
 ### 6. Testing and Validation
