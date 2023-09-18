@@ -363,7 +363,7 @@ In souce server,  click on your server Hostname, then Test and Cutover -> Mark a
 
 Continue on the popup to confirm that the testing went succesful and testing instance can be terminated.
 
-![]( https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/ready_for_cutover_pop_up.png)
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/ready_for_cutover_pop-up.png)
 
 
 ### 6. Testing and Validation
