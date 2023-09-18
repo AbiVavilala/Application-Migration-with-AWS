@@ -11,10 +11,6 @@ This README.md file provides comprehensive documentation for the process of migr
    - [3. Cloud Formation template](#3-CloudFormation-template)
    - [4. Database Migration](#4-Database-Migration)
    - [5. Server Migration](#5-Server-Migration)
-   - [6. Testing and Validation](#6-testing-and-validation)
-- [Monitoring and Optimization](#monitoring-and-optimization)
-- [Security Considerations](#security-considerations)
-- [Troubleshooting](#troubleshooting)
 - [Resources](#resources)
 - [License](#license)
 
