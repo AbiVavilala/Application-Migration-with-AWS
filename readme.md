@@ -287,6 +287,10 @@ Click on Source Server name and it will take yo to following page
 ![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/sourceserver1.PNG)
 
 
+In Server Info we can find retrived information about source server. We can view disk settings, launch settings.
+
+![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/sourceserver2.PNG)
+
 
 ### 6. Testing and Validation
 
