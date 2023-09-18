@@ -359,7 +359,7 @@ you will see succesfully launched test/cutover ec2 instance. This process valida
 
 In souce server,  click on your server Hostname, then Test and Cutover -> Mark as "ready for cutover".
 
-![]( https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/ready_for_cutover.png)
+![]( https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/ready_fo.png)
 
 Continue on the popup to confirm that the testing went succesful and testing instance can be terminated.
 
