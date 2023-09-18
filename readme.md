@@ -1,7 +1,5 @@
 # Application Migration with AWS
 
-This README.md file provides comprehensive documentation for the process of migrating an application to the Amazon Web Services (AWS) cloud platform. I followed the steps outlined below for Migrating Onprem Wordpress Application to AWS.
-
 ## Table of Contents
 
 - [Introduction](#introduction)
@@ -15,6 +13,7 @@ This README.md file provides comprehensive documentation for the process of migr
 - [License](#license)
 
 ## Introduction
+I Migrated Onprem Wordpress Application to AWS. I have documented my work. This project  provides comprehensive documentation for the process of migrating an application to the Amazon Web Services (AWS) cloud platform. I followed the steps outlined below for Migrating Onprem Wordpress Application to AWS.
 
 This document outlines the steps and best practices for migrating your application to AWS. AWS provides a range of services and tools that can help you seamlessly migrate your application to the cloud. By following this guide, you will ensure a smooth transition while taking advantage of AWS's scalability, reliability, and cost-effectiveness.
 
@@ -26,7 +25,7 @@ This document outlines the steps and best practices for migrating your applicati
 ### Source Environment
 - Current Environment consist of a three tier e-commerce application; a webserver running ubuntu with apache, PHP, Wordpress/ WooCommerce and a database server running Ubuntu with MySQL version 5.7.
 ![](https://github.com/AbiVavilala/Application-Migration-with-AWS/blob/master/images/source-env.png)
-- The Onprem application has a webserver and database running on server. I will replatform database with AWS Database Migration Service.
+- The Onprem application has a webserver and database running on server. I will replatform database with AWS Database Migration Service. I will Rehost (lift-and-shift) my webserver to AWS using AWS's leading migration service Application Migration Service (AWS MGN).
 
    
 ### Migration Strategy
